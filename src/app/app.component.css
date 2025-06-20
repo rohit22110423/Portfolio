@@ -1,0 +1,100 @@
+/* Enable smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Each page section fills viewport */
+.page-section {
+  min-height: 100vh;
+  padding: 5rem 1rem;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+}
+
+/* Resume card styles */
+.resume-section {
+  margin-bottom: 4rem;
+}
+
+.resume-img {
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Skill icons */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease;
+}
+.skill-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Scroll Progress Bar */
+.progress-bar-top {
+  height: 4px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+/* Navigation dots */
+.nav-dots {
+  padding-right: 1rem;
+  z-index: 1000;
+}
+.nav-dots li {
+  margin: 0.5rem 0;
+}
+.nav-dots a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #6c757d;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.nav-dots a.active,
+.nav-dots a:hover {
+  background-color: #0d6efd;
+}
+
+/* Glowing border on education/project cards */
+.card-glow {
+  border: none;
+  background: linear-gradient(135deg, #00d9ff, #6600ff);
+  padding: 2px;
+  border-radius: 1.2rem;
+}
+.card-glow .card {
+  border-radius: 1.1rem;
+  background-color: #121212;
+  color: white;
+  overflow: hidden;
+}
+
+/* Hover grow */
+.card:hover {
+  transform: scale(1.015);
+  transition: transform 0.3s ease;
+}
+
+/* Education image overlay fade effect */
+.card-img {
+  transition: transform 0.5s ease;
+}
+.card-img:hover {
+  transform: scale(1.05);
+}

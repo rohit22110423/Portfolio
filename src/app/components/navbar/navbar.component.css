@@ -1,0 +1,31 @@
+/* Glass blur */
+nav{backdrop-filter:blur(6px);}
+
+/* Box highlight for active link */
+.active-box{
+  background:#0d6efd;
+  color:#fff!important;
+  box-shadow:0 0 8px rgba(13,110,253,.5);
+  font-weight:600;
+}
+
+/* Hover */
+.nav-link:hover{background:rgba(13,110,253,.2);transition:.3s}
+
+/* Optional entry fade override */
+.nav-item{opacity:0;animation-fill-mode:forwards}
+
+.navbar-nav .nav-link {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+  cursor: pointer;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active-box {
+  background-color: #0d6efd;
+  color: white;
+  transition: background-color 0.3s ease;
+}

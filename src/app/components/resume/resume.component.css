@@ -1,0 +1,64 @@
+/* Scroll wrapper */
+.resume-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.resume-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  padding: 3rem 1rem;
+}
+.resume-card {
+  max-width: 1100px;
+  border-radius: 1.5rem;
+  transition: all 0.4s ease;
+}
+.resume-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.3);
+}
+.resume-img {
+  max-height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
+  border: 3px solid #0d6efd;
+  box-shadow: 0 0 25px rgba(13, 110, 253, 0.3);
+}
+
+/* Skill icons */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Scroll progress */
+.progress-bar-top {
+  height: 4px;
+  background-color: #0d6efd;
+  transition: width 0.2s ease-in-out;
+}
+
+/* Navigation dots */
+.nav-dots {
+  margin-right: 1rem;
+}
+.nav-dots li {
+  margin: 0.4rem 0;
+}
+.nav-dots a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6c757d;
+  transition: background 0.3s;
+}
+.nav-dots a.active,
+.nav-dots a:hover {
+  background: #0d6efd;
+}

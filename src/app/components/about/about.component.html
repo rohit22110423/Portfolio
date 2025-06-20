@@ -1,0 +1,59 @@
+<section class="hero d-flex align-items-center text-light">
+
+  <!-- subtle moving particles -->
+  <div class="particles"></div>
+
+  <div class="container position-relative z-1">
+    <div class="row g-0">
+
+      <!-- ◀︎ IMAGE side -->
+      <div class="col-lg-5 d-flex justify-content-center">
+        <figure class="photo-card my-5">
+          <img src="assets/Rohit_Kumar.jpg" alt="Rohit Kumar">
+        </figure>
+      </div>
+
+      <!-- ▶︎ TEXT side -->
+      <div class="col-lg-7 d-flex align-items-center">
+        <div class="glass p-5 p-lg-4 ms-lg-n5">
+
+          <!-- accent bar -->
+          <div class="accent mb-3"></div>
+
+          <h1 class="display-4 fw-bold mb-2">
+            Hi, I’m <span class="text-primary">{{ name }}</span>
+          </h1>
+
+          <h4 class="fw-semibold text-warning mb-4">{{ title }}</h4>
+
+          <p class="lead lh-base mb-4 text-light-emphasis">
+            {{ description }}
+          </p>
+
+          <!-- skills -->
+          <div class="mb-4">
+            <span *ngFor="let s of skills"
+                  class="badge me-2 mb-2 rounded-pill bg-{{ s.clr }}">
+              {{ s.text }}
+            </span>
+          </div>
+
+          <!-- CTA & socials -->
+          <div class="d-flex flex-wrap align-items-center gap-4">
+            <a href="mailto:contact@domain.com"
+               class="btn btn-primary btn-lg shadow-sm">
+              <i class="bi bi-envelope-fill me-2"></i>Hire Me
+            </a>
+
+            <div class="fs-3 d-flex gap-3">
+              <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+              <a href="#" class="text-info"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div> <!-- /glass -->
+      </div>
+
+    </div>
+  </div>
+</section>
