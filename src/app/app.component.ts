@@ -1,5 +1,7 @@
 import { Component, HostListener, AfterViewInit } from '@angular/core';
 
+
+
 /* ——— Interfaces ——— */
 export interface ResumeEntry {
   heading: string;
