@@ -1,0 +1,12 @@
+html,body{height:100%;scroll-behavior:smooth;}
+body{scroll-snap-type:y mandatory;margin:0;}
+
+.page-section{
+  min-height:100vh;
+  scroll-snap-align:start;
+  padding-top:5rem;       /* space for fixed navbar */
+}
+
+/* optional alternating bg colours handled via classes */
+.bg-dark{background:#0f0f0f!important;}
+.bg-secondary{background:#1a1a1a!important;}

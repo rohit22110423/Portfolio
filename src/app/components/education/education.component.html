@@ -1,0 +1,66 @@
+<div class="container-fluid min-vh-100 py-5" style="background: linear-gradient(to right, #1f1c2c, #040113);">
+  <h2 class="text-center text-light mb-5 display-5 fw-bold" style="text-shadow: 2px 2px #ff0055;">Education</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 px-4">
+    <div class="col" *ngFor="let edu of educationDetails; let i = index">
+      
+      <!-- Glowing Border Wrapper -->
+      <div
+        class="p-2 rounded-4 shadow-lg"
+        style="
+          background: linear-gradient(145deg, #ff0066, #6600ff, #00d9ff);
+          padding: 4px;
+          border-radius: 1.5rem;
+        "
+      >
+        <!-- Inner Card -->
+        <div
+          class="card border-0 h-100 overflow-hidden"
+          style="
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 1.3rem;
+            color: #ffffff;
+          "
+          (mouseenter)="hoveredCard = i"
+          (mouseleave)="hoveredCard = null"
+        >
+          <!-- Image -->
+          <div class="position-relative overflow-hidden" style="height: 300px;">
+            <img
+              [src]="edu.image"
+              class="card-img h-100 w-100"
+              [ngStyle]="{
+                'object-fit': 'cover',
+                'opacity': '0.3',
+                'transform': hoveredCard === i ? 'scale(1.1)' : 'scale(1)',
+                'transition': 'transform 0.5s ease'
+              }"
+              alt="Image of {{ edu.school }}"
+            />
+          </div>
+
+          <!-- Text Overlay -->
+          <div
+            class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center px-2"
+          >
+            <h5 class="card-title mb-2 fw-bold" style="color: #ffcc00; font-size: 1.3rem;">
+              {{ edu.level }}
+            </h5>
+            <p class="card-text text-light mb-1"><strong>🏫 Institution:</strong> {{ edu.school }}</p>
+            <ng-container *ngIf="edu.board">
+              <p class="card-text text-light mb-1"><strong>📘 Board:</strong> {{ edu.board }}</p>
+            </ng-container>
+            <p class="card-text text-light mb-1"><strong>📅 Year:</strong> {{ edu.year }}</p>
+            <ng-container *ngIf="edu.percentage">
+              <p class="card-text text-white mb-1"><strong>📈 Percentage:</strong> {{ edu.percentage }}</p>
+            </ng-container>
+            <ng-container *ngIf="edu.CGPA">
+              <p class="card-text text-info mb-1"><strong>⭐ CGPA:</strong> {{ edu.CGPA }}</p>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
