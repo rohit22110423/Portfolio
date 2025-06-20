@@ -98,3 +98,26 @@ body {
 .card-img:hover {
   transform: scale(1.05);
 }
+/* Gradient text style */
+.text-gradient {
+  background: linear-gradient(90deg, #00C9FF, #92FE9D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image card styling */
+.image-card {
+  background: #1c1c1c;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  margin: auto;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 255, 200, 0.2);
+}
